@@ -1,0 +1,54 @@
+name: update-sub
+
+on:
+  schedule:
+    - cron: "17 */3 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: update-sub
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: 准备脚本和凭据
+        run: |
+          mkdir -p scripts docs
+          curl -fsSL "https://usresi.web.zaka.live/setup/ur_sub.py" -o scripts/ur_sub.py
+          curl -fsSL "https://usresi.web.zaka.live/setup/socks_relay.py" -o scripts/socks_relay.py
+          curl -fsSL "https://usresi.web.zaka.live/setup/k9x2f7m4q1.txt" -o ur-api-key.txt
+          touch docs/.nojekyll
+          printf '<meta http-equiv="refresh" content="0;url=sub/index.html">\n' > docs/index.html
+
+      - name: 抽节点并生成订阅
+        continue-on-error: true
+        env:
+          UR_API_KEY: ${{ secrets.UR_API_KEY }}
+          UR_KEEP: "1"
+          UR_TRIES: "18"
+          UR_SLUG: "sub"
+        run: python3 scripts/ur_sub.py
+
+      - name: 提交
+        run: |
+          git config user.name "sub-bot"
+          git config user.email "sub-bot@users.noreply.github.com"
+          git add -A docs
+          if git diff --staged --quiet; then
+            echo "本轮没有变化"
+          else
+            git commit -m "sub: $(date -u +%FT%TZ)"
+            git push
+          fi
