@@ -2,20 +2,20 @@
   "outbounds": [
     {
       "type": "socks",
-      "tag": "US-Northbrook-ComcastCable-67-173-122-141",
-      "server": "crisp.bringyour.com",
+      "tag": "US-Houston-ComcastCable-73-115-189-142",
+      "server": "fireside.bringyour.com",
       "server_port": 7171,
       "version": "5",
-      "username": "06H1FH7590KPLL1175A76RLUV6K3DGKF83UQEK6GJ3CSV9EP04G5TJTLRC",
+      "username": "06H1JKGUCQGTTJOQAODH49H5KACTLVP3FMM6VQIP6RJH0UG80TK6A2LB7K",
       "password": "x"
     },
     {
       "type": "selector",
       "tag": "proxy",
       "outbounds": [
-        "US-Northbrook-ComcastCable-67-173-122-141"
+        "US-Houston-ComcastCable-73-115-189-142"
       ],
-      "default": "US-Northbrook-ComcastCable-67-173-122-141"
+      "default": "US-Houston-ComcastCable-73-115-189-142"
     },
     {
       "type": "direct",

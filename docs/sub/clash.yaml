@@ -1,27 +1,27 @@
 # URnetwork 美国住宅家宽订阅（自动生成，勿手改）
-# 更新时间：2026-11-26 12:12:18 UTC
+# 更新时间：2026-11-26 21:46:02 UTC
 # 节点是一次性的：provider 下线即失效，订阅每轮自动换新
 proxies:
-  - name: "US-Northbrook-ComcastCable-67-173-122-141"
+  - name: "US-Houston-ComcastCable-73-115-189-142"
     type: socks5
-    server: crisp.bringyour.com
+    server: fireside.bringyour.com
     port: 7171
-    username: "06H1FH7590KPLL1175A76RLUV6K3DGKF83UQEK6GJ3CSV9EP04G5TJTLRC"
+    username: "06H1JKGUCQGTTJOQAODH49H5KACTLVP3FMM6VQIP6RJH0UG80TK6A2LB7K"
     password: "x"
     udp: true
-    # 出口 67.173.122.141 Northbrook Illinois Comcast Cable Communications, LLC
+    # 出口 73.115.189.142 Houston Texas Comcast Cable Communications
 proxy-groups:
   - name: "US-Resi"
     type: select
     url: "http://www.gstatic.com/generate_204"
     interval: 300
     tolerance: 50
-    proxies: ["US-Northbrook-ComcastCable-67-173-122-141"]
+    proxies: ["US-Houston-ComcastCable-73-115-189-142"]
   - name: "PROXY"
     type: select
     proxies:
       - "US-Resi"
-      - "US-Northbrook-ComcastCable-67-173-122-141"
+      - "US-Houston-ComcastCable-73-115-189-142"
       - "DIRECT"
 rules:
   - "MATCH,PROXY"
