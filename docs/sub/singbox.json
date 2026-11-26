@@ -1,0 +1,25 @@
+{
+  "outbounds": [
+    {
+      "type": "socks",
+      "tag": "US-Northbrook-ComcastCable-67-173-122-141",
+      "server": "crisp.bringyour.com",
+      "server_port": 7171,
+      "version": "5",
+      "username": "06H1FH7590KPLL1175A76RLUV6K3DGKF83UQEK6GJ3CSV9EP04G5TJTLRC",
+      "password": "x"
+    },
+    {
+      "type": "selector",
+      "tag": "proxy",
+      "outbounds": [
+        "US-Northbrook-ComcastCable-67-173-122-141"
+      ],
+      "default": "US-Northbrook-ComcastCable-67-173-122-141"
+    },
+    {
+      "type": "direct",
+      "tag": "direct"
+    }
+  ]
+}

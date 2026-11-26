@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>US 住宅订阅</title>
+<style>
+:root{color-scheme:dark}
+body{margin:0;background:#0b0f14;color:#e6edf3;font:15px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",system-ui,sans-serif;padding:22px}
+.wrap{max-width:680px;margin:0 auto}
+h1{font-size:20px;margin:0 0 4px}
+.muted{color:#8b949e;font-size:13px}
+.card{background:#12181f;border:1px solid #212a35;border-radius:12px;padding:16px;margin:14px 0}
+a{color:#58a6ff;word-break:break-all}
+.row{display:flex;gap:8px;align-items:center;margin:10px 0;flex-wrap:wrap}
+input{flex:1;min-width:220px;background:#0b0f14;border:1px solid #30363d;border-radius:8px;color:#e6edf3;padding:8px 10px;font-size:13px}
+button{background:#238636;border:0;color:#fff;border-radius:8px;padding:8px 14px;font-size:13px;cursor:pointer}
+button:active{opacity:.8}
+code{background:#0b0f14;border:1px solid #30363d;border-radius:6px;padding:1px 6px;font-size:12px}
+ul{padding-left:20px;margin:6px 0}
+</style></head><body><div class="wrap">
+<h1>美国住宅家宽订阅</h1>
+<div class="muted">上次更新：<span id="up">读取中…</span> · <span id="cnt">-</span> 个节点</div>
+
+<div class="card">
+  <div><b>Clash / mihomo / Clash Verge / FlClash</b></div>
+  <div class="row"><input id="c" readonly value="clash.yaml"><button onclick="cp('c')">复制</button></div>
+  <div class="muted">客户端里「订阅 → 新建 → 粘贴这个地址」，更新间隔填 180~360 分钟。</div>
+</div>
+
+<div class="card">
+  <div><b>v2rayN / NekoBox / v2rayNG</b></div>
+  <div class="row"><input id="v" readonly value="v2rayn.txt"><button onclick="cp('v')">复制</button></div>
+</div>
+
+<div class="card">
+  <div><b>sing-box</b></div>
+  <div class="row"><input id="s" readonly value="singbox.json"><button onclick="cp('s')">复制</button></div>
+</div>
+
+<div class="card">
+  <div><b>当前出口</b></div>
+  <ul id="exits"><li class="muted">读取中…</li></ul>
+</div>
+</div>
+<script>
+const base = location.href.replace(/[^/]*$/, '');
+for (const id of ['c','v','s']) {
+  const el = document.getElementById(id);
+  el.value = base + el.value;
+}
+function cp(id){const el=document.getElementById(id);el.select();document.execCommand('copy');}
+fetch('status.json?t='+Date.now()).then(r=>r.json()).then(d=>{
+  document.getElementById('up').textContent = d.updated || '-';
+  document.getElementById('cnt').textContent = (d.nodes||[]).length;
+  const ul = document.getElementById('exits'); ul.innerHTML='';
+  (d.nodes||[]).forEach(n=>{
+    const li=document.createElement('li');
+    li.innerHTML = '<code>'+n.ip+'</code> '+[n.city,n.region,n.isp].filter(Boolean).join(' · ');
+    ul.appendChild(li);
+  });
+  if(!ul.children.length) ul.innerHTML='<li class="muted">本轮没抽到干净节点</li>';
+}).catch(()=>{document.getElementById('up').textContent='status.json 读取失败';});
+</script></body></html>
