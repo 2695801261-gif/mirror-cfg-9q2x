@@ -1,13 +1,13 @@
 {
-  "updated": "2026-11-26 21:46:02 UTC",
+  "updated": "2026-11-27 08:46:33 UTC",
   "country": "United States",
   "nodes": [
     {
-      "ip": "73.115.189.142",
-      "city": "Houston",
-      "region": "Texas",
-      "isp": "Comcast Cable Communications",
-      "seconds_1mb": 4.764918
+      "ip": "162.230.69.134",
+      "city": "Oklahoma City",
+      "region": "Oklahoma",
+      "isp": "AT&T Enterprises, LLC",
+      "seconds_1mb": 3.449796
     }
   ]
 }

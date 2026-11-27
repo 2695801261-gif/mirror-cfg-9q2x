@@ -2,20 +2,20 @@
   "outbounds": [
     {
       "type": "socks",
-      "tag": "US-Houston-ComcastCable-73-115-189-142",
-      "server": "fireside.bringyour.com",
-      "server_port": 7171,
+      "tag": "US-OklahomaCity-ATTEnterpris-162-230-69-134",
+      "server": "crisp.bringyour.com",
+      "server_port": 7141,
       "version": "5",
-      "username": "06H1JKGUCQGTTJOQAODH49H5KACTLVP3FMM6VQIP6RJH0UG80TK6A2LB7K",
+      "username": "06H1OBMJIVUM1S0Q8N25F8OQNKMG8HT8PU52LG2679E5G65NQUMHE7NKVG",
       "password": "x"
     },
     {
       "type": "selector",
       "tag": "proxy",
       "outbounds": [
-        "US-Houston-ComcastCable-73-115-189-142"
+        "US-OklahomaCity-ATTEnterpris-162-230-69-134"
       ],
-      "default": "US-Houston-ComcastCable-73-115-189-142"
+      "default": "US-OklahomaCity-ATTEnterpris-162-230-69-134"
     },
     {
       "type": "direct",
