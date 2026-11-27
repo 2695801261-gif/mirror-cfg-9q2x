@@ -1,27 +1,27 @@
 # URnetwork 美国住宅家宽订阅（自动生成，勿手改）
-# 更新时间：2026-11-27 08:46:33 UTC
+# 更新时间：2026-11-27 19:04:01 UTC
 # 节点是一次性的：provider 下线即失效，订阅每轮自动换新
 proxies:
-  - name: "US-OklahomaCity-ATTEnterpris-162-230-69-134"
+  - name: "US-Queens-VerizonBusin-98-113-95-233"
     type: socks5
-    server: crisp.bringyour.com
-    port: 7141
-    username: "06H1OBMJIVUM1S0Q8N25F8OQNKMG8HT8PU52LG2679E5G65NQUMHE7NKVG"
+    server: fireside.bringyour.com
+    port: 7117
+    username: "06H1SP21OT9C3BNAFLSDMOU2RTGG4KSRPNAFC1GDSMPCMERR75BU90KH7S"
     password: "x"
     udp: true
-    # 出口 162.230.69.134 Oklahoma City Oklahoma AT&T Enterprises, LLC
+    # 出口 98.113.95.233 Queens New York Verizon Business
 proxy-groups:
   - name: "US-Resi"
     type: select
     url: "http://www.gstatic.com/generate_204"
     interval: 300
     tolerance: 50
-    proxies: ["US-OklahomaCity-ATTEnterpris-162-230-69-134"]
+    proxies: ["US-Queens-VerizonBusin-98-113-95-233"]
   - name: "PROXY"
     type: select
     proxies:
       - "US-Resi"
-      - "US-OklahomaCity-ATTEnterpris-162-230-69-134"
+      - "US-Queens-VerizonBusin-98-113-95-233"
       - "DIRECT"
 rules:
   - "MATCH,PROXY"

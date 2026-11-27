@@ -2,20 +2,20 @@
   "outbounds": [
     {
       "type": "socks",
-      "tag": "US-OklahomaCity-ATTEnterpris-162-230-69-134",
-      "server": "crisp.bringyour.com",
-      "server_port": 7141,
+      "tag": "US-Queens-VerizonBusin-98-113-95-233",
+      "server": "fireside.bringyour.com",
+      "server_port": 7117,
       "version": "5",
-      "username": "06H1OBMJIVUM1S0Q8N25F8OQNKMG8HT8PU52LG2679E5G65NQUMHE7NKVG",
+      "username": "06H1SP21OT9C3BNAFLSDMOU2RTGG4KSRPNAFC1GDSMPCMERR75BU90KH7S",
       "password": "x"
     },
     {
       "type": "selector",
       "tag": "proxy",
       "outbounds": [
-        "US-OklahomaCity-ATTEnterpris-162-230-69-134"
+        "US-Queens-VerizonBusin-98-113-95-233"
       ],
-      "default": "US-OklahomaCity-ATTEnterpris-162-230-69-134"
+      "default": "US-Queens-VerizonBusin-98-113-95-233"
     },
     {
       "type": "direct",
