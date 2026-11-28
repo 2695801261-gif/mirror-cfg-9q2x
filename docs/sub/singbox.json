@@ -2,20 +2,20 @@
   "outbounds": [
     {
       "type": "socks",
-      "tag": "US-Queens-VerizonBusin-98-113-95-233",
-      "server": "fireside.bringyour.com",
-      "server_port": 7117,
+      "tag": "US-Georgetown-MediacomComm-173-29-39-133",
+      "server": "crisp.bringyour.com",
+      "server_port": 7153,
       "version": "5",
-      "username": "06H1SP21OT9C3BNAFLSDMOU2RTGG4KSRPNAFC1GDSMPCMERR75BU90KH7S",
+      "username": "06H20BG5O14IFB4UFAOQE95J64HTM0GT067VSTFU6TJO523RANF6O8IPSC",
       "password": "x"
     },
     {
       "type": "selector",
       "tag": "proxy",
       "outbounds": [
-        "US-Queens-VerizonBusin-98-113-95-233"
+        "US-Georgetown-MediacomComm-173-29-39-133"
       ],
-      "default": "US-Queens-VerizonBusin-98-113-95-233"
+      "default": "US-Georgetown-MediacomComm-173-29-39-133"
     },
     {
       "type": "direct",

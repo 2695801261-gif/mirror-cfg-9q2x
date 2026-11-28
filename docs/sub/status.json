@@ -1,13 +1,13 @@
 {
-  "updated": "2026-11-27 19:04:01 UTC",
+  "updated": "2026-11-28 03:23:57 UTC",
   "country": "United States",
   "nodes": [
     {
-      "ip": "98.113.95.233",
-      "city": "Queens",
-      "region": "New York",
-      "isp": "Verizon Business",
-      "seconds_1mb": 2.16912
+      "ip": "173.29.39.133",
+      "city": "Georgetown",
+      "region": "Delaware",
+      "isp": "Mediacom Communications",
+      "seconds_1mb": 4.526704
     }
   ]
 }
