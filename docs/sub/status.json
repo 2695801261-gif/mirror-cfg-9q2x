@@ -1,13 +1,13 @@
 {
-  "updated": "2026-11-28 03:23:57 UTC",
+  "updated": "2026-11-28 15:40:06 UTC",
   "country": "United States",
   "nodes": [
     {
-      "ip": "173.29.39.133",
-      "city": "Georgetown",
-      "region": "Delaware",
-      "isp": "Mediacom Communications",
-      "seconds_1mb": 4.526704
+      "ip": "67.184.75.81",
+      "city": "Arlington Heights",
+      "region": "Illinois",
+      "isp": "Comcast Cable Communications, LLC",
+      "seconds_1mb": 2.467487
     }
   ]
 }

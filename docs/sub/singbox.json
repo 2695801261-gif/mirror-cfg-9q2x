@@ -2,20 +2,20 @@
   "outbounds": [
     {
       "type": "socks",
-      "tag": "US-Georgetown-MediacomComm-173-29-39-133",
+      "tag": "US-ArlingtonHeigh-ComcastCable-67-184-75-81",
       "server": "crisp.bringyour.com",
-      "server_port": 7153,
+      "server_port": 7129,
       "version": "5",
-      "username": "06H20BG5O14IFB4UFAOQE95J64HTM0GT067VSTFU6TJO523RANF6O8IPSC",
+      "username": "06H25K09B8S45Q0BNHOTH2M8BBNSUCQ6BC175PCHKUDFBOHAAB6T2OHIF4",
       "password": "x"
     },
     {
       "type": "selector",
       "tag": "proxy",
       "outbounds": [
-        "US-Georgetown-MediacomComm-173-29-39-133"
+        "US-ArlingtonHeigh-ComcastCable-67-184-75-81"
       ],
-      "default": "US-Georgetown-MediacomComm-173-29-39-133"
+      "default": "US-ArlingtonHeigh-ComcastCable-67-184-75-81"
     },
     {
       "type": "direct",

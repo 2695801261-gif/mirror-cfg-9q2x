@@ -1,27 +1,27 @@
 # URnetwork 美国住宅家宽订阅（自动生成，勿手改）
-# 更新时间：2026-11-28 03:23:57 UTC
+# 更新时间：2026-11-28 15:40:06 UTC
 # 节点是一次性的：provider 下线即失效，订阅每轮自动换新
 proxies:
-  - name: "US-Georgetown-MediacomComm-173-29-39-133"
+  - name: "US-ArlingtonHeigh-ComcastCable-67-184-75-81"
     type: socks5
     server: crisp.bringyour.com
-    port: 7153
-    username: "06H20BG5O14IFB4UFAOQE95J64HTM0GT067VSTFU6TJO523RANF6O8IPSC"
+    port: 7129
+    username: "06H25K09B8S45Q0BNHOTH2M8BBNSUCQ6BC175PCHKUDFBOHAAB6T2OHIF4"
     password: "x"
     udp: true
-    # 出口 173.29.39.133 Georgetown Delaware Mediacom Communications
+    # 出口 67.184.75.81 Arlington Heights Illinois Comcast Cable Communications, LLC
 proxy-groups:
   - name: "US-Resi"
     type: select
     url: "http://www.gstatic.com/generate_204"
     interval: 300
     tolerance: 50
-    proxies: ["US-Georgetown-MediacomComm-173-29-39-133"]
+    proxies: ["US-ArlingtonHeigh-ComcastCable-67-184-75-81"]
   - name: "PROXY"
     type: select
     proxies:
       - "US-Resi"
-      - "US-Georgetown-MediacomComm-173-29-39-133"
+      - "US-ArlingtonHeigh-ComcastCable-67-184-75-81"
       - "DIRECT"
 rules:
   - "MATCH,PROXY"
